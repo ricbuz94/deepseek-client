@@ -1,0 +1,102 @@
+:root {
+    --ac-color: #526AF5;
+    --fg-color: #eff3f4;
+    --fg-color-hover: #d7dbdc;
+    --bg-color: #17202a;
+    --cd-color: #273340;
+    --overlay: rgba(239, 243, 244, 0.1);
+    --overlay-light: rgba(82, 107, 245, 0.1);
+    --cd-shadow: 0px 4px 8px rgb(15, 19, 20, 0.2);
+    --tr-200: 200ms;
+    --tr-400: 400ms;
+    --error: #f4212e;
+    --overlay-error: rgba(244, 33, 47, 0.1);
+    --success: #008f39;
+    --overlay-success: rgb(0, 143, 57, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+    margin: 0px;
+    height: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: sans-serif;
+    color: var(--fg-color);
+    background-color: var(--bg-color);
+}
+
+body {
+    padding: 2rem;
+    padding-top: 0px;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+p {
+    margin: 0.25rem 0px;
+    margin-bottom: 0.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0.5rem 0px;
+    margin-top: 0.75rem;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+button,
+textarea,
+input {
+    font-family: inherit;
+}
+
+button:disabled,
+textarea:disabled,
+input:disabled {
+    cursor: not-allowed;
+}
+
+button>.lucide,
+button.opaque>span>.lucide {
+    stroke: var(--bg-color);
+}
+
+button.transparent>.lucide {
+    stroke: var(--fg-color);
+}
+
+.lucide {
+    stroke: var(--fg-color);
+    min-width: 12px;
+    min-height: 12px;
+}
+
+.lucide-loader {
+    animation: rotate 1s infinite;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(0.5turn);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        padding: 0px;
+    }
+}
